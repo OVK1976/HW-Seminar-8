@@ -16,14 +16,13 @@
 Программа считает сумму элементов в каждой строке и выдаёт номер 
 строки с наименьшей суммой элементов: 1 строка */
 
-using System;
-
 Console.WriteLine("Нахождение строки массива с наименьшей суммой элементов");
 Console.WriteLine("Создан массив:");
 int[,] Array = GetArray();
 PrintSpace();
 PrintArray(Array);
 PrintSpace();
+Console.WriteLine("Значения сумм элементов в каждой строке:");
 int[] SRArray = SumRowArray(Array);
 MinString(SRArray);
 PrintSpace();
@@ -74,19 +73,17 @@ int [] SumRowArray (int[,] Array)
 
 void MinString (int[] array)
 {
+    
     int min = array[0];
     int MinIndexString=0;
-
     for (int i = 0; i < array.Length; i++)
-    {
-        if (array [i]< min)
         {
-        min = array [i];
-        MinIndexString=i;
-        }
-    }
-    Console.WriteLine($"Значения сумму по каждой строке:");
-
+            if (array [i]< min)
+            {
+            min = array [i];
+            MinIndexString=i;
+            }
+        }  
     Console.WriteLine($"Минимальная сумма элементов находится в строке {MinIndexString+1}");
 }
 
