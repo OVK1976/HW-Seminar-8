@@ -12,7 +12,7 @@
 */
 
 
-Console.WriteLine("Упорядочивание каждой строки массива по убыванию");
+Console.WriteLine("Упорядочивание по убыванию каждой строки массива ");
 Console.WriteLine("Задайте количество строк массива");
 int m = int.Parse(Console.ReadLine());
 Console.WriteLine("Задайте количество столбцов массива");
@@ -27,7 +27,7 @@ PrintTwoDimensialArray(NewArray);
 Console.WriteLine();
 
 
-#region Создание двумерного массив со случайными целыми числами
+#region Создание двумерного массива со случайными целыми числами
 int[,] GetArray(int m, int n)
 {
     int[,] array = new int[m, n];
@@ -44,7 +44,7 @@ int[,] GetArray(int m, int n)
 #endregion
 
 
-#region Функция сортировки строки двумерного массива по убыванию
+#region Сортировка строки двумерного массива по убыванию
 void SortRowTwoDimensialArray(int[,] StrArray)
 {
     int Min, MinI, MinJ, Temp;
